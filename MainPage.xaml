@@ -1,0 +1,112 @@
+﻿<Page
+    x:Class="Final_Project_Blackjack.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final_Project_Blackjack"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Orientation="Vertical" Background="Green">
+        <Grid Padding="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="left" Orientation="Horizontal">
+                <Button Content="?" CornerRadius="10" FontSize="15" Foreground="Green"  Background="White" Click="Question_Click"></Button>
+                <Button Name="btnTestMode" Margin="20,0,0,0" Content="Enter Test Mode(Show computer's hand)" FontSize="15" Foreground="Green"  Background="White" Click="TestMode_Click"></Button>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="right">
+                <Button Content="X" CornerRadius="10" FontSize="15" Foreground="red"  Background="White" Click="Exit_Click"></Button>
+            </StackPanel>
+        </Grid>
+
+
+        <StackPanel>
+            <Grid Height="200" Name="GridComputerHand" HorizontalAlignment="center">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+        </StackPanel>
+
+        <Grid Height="200" Margin="50,50,50,50">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Grid.Row="0" Name="ComputerStoppedSign" Visibility="Collapsed" Width="200" Height="200" Source="Assets/ComputerStoppedSign.png"></Image>
+            <Image Grid.Column="1" Grid.Row="0" Width="100" Height="100" Source="Assets/CardBack.png"></Image>
+            <Image Grid.Column="2" Grid.Row="0" Name="UserStoppedSign" Visibility="Collapsed" Width="200" Height="200" Source="Assets/UserStoppedSign.png"></Image>
+
+        </Grid>
+
+        <StackPanel>
+            <Grid Height="200" Name="GridUserHand" HorizontalAlignment="center">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </StackPanel>
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                
+            </Grid.ColumnDefinitions>
+
+            <Button Name="btnDraw" CornerRadius="10" HorizontalAlignment="center" Grid.Column="1" Height="50" Width="75" Background="White" Visibility="Collapsed" Content="Draw" Click="Draw_Click"></Button>
+            <Button Name="btnStart" CornerRadius="10" HorizontalAlignment="center" Grid.Column="2" Height="50" Width="75" Background="White"  Content="Start" Click="Start_Click"></Button>
+
+            <Button Name="btnStop" CornerRadius="10" HorizontalAlignment="center" Grid.Column="3"  Height="50" Width="75" Background="White"  Visibility="Collapsed" Content="Stop" Click="Stop_Click"></Button>
+
+        </Grid>
+
+    </StackPanel>
+
+</Page>
+
